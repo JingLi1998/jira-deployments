@@ -36,6 +36,7 @@ jobs:
           echo test, and deploy your project.
           
   build-stg:
+    name: name
     runs-on: ubuntu-latest
     steps:
       - name: Run a multi line script
@@ -43,6 +44,7 @@ jobs:
 
         # ...deployment-specific steps
   deployment:
+    name: name2
     runs-on: ubuntu-latest
     steps:
       - name: deploy
