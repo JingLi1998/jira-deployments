@@ -34,3 +34,20 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+  deployment-stg:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: deploy
+        run: echo Hello, world!
+
+        # ...deployment-specific steps
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: deploy
+        run: echo Hello, world!
+
+        # ...deployment-specific steps
